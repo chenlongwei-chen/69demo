@@ -1,0 +1,6 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:root@localhost:7001/eureka
+    fetch-registry: false
+    register-with-eureka: false
