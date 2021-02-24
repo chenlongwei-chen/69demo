@@ -1,6 +1,19 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: myconsumer
+  main: #允许多个feign调用相同的服务接口
+    allow-bean-definition-overriding: true
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1.0
 eureka:
   client:
     service-url:
       defaultZone: http://root:root@localhost:7001/eureka
-    fetch-registry: false
-    register-with-eureka: false
+
+
